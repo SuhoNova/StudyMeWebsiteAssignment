@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="StudyMe - Dashboard Page">
+    <meta name="author" content="Alex Yoo - 343218791 - syu680">
+
+    <title>StudyMe 350 - Dashboard Page </title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="assets/css/lib/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="assets/css/look_better.css" rel="stylesheet">
+    <link href="assets/css/tabbing.css" rel="stylesheet">
+    <link href="assets/css/tabbing_course.css" rel="stylesheet">
+
+
+    <style>
+        body {
+            padding-top: 50px;
+        }
+
+        tab {
+            padding-left: 3em;
+        }
+    </style>
+</head>
+
+
+<body>
+
+    <!--Navigation bar-->
+    <div id="nav-placeholder">
+        <div id="page-resource" class="overlay">
+            <!-- Chat box -->
+            <div id="chatbox">
+                <div id="chat-topbar">
+                    <p id="first-chat-message" class="chat active-chat">Modern Arts</p>
+                    <p id="second-chat-message" class="chat">Art History</p>
+                    <input type="button" id="chat-exit-btn" onClick="closeChatBox()" value="X">
+                </div>
+                <div id="chat-content">
+                    <div id="first-chat-message" class="chat active-chat">
+                        <p class="chat-last-message" id="chat-first-last-message"><b>Jay Lu:</b> lol nice</p>
+                    </div>
+                    <div id="second-chat-message" class="chat">
+                        <p class="chat-last-message" id="chat-second-last-message"><b>Sam Smith:</b> help me</p>
+                    </div>
+                </div>
+
+                <div class="chat-input">
+                    <input type="text" id="chat-box" onkeydown="if (event.keyCode == 13)
+                        document.getElementById('send-icon').click()" placeholder="Chat">
+                    <input type="image" src="assets/img/send.png" onClick="addMessage(this)" alt="enter message" id="send-icon">
+                </div>
+            </div>
+
+            <!-- Button to close the overlay navigation https://www.w3schools.com/howto/howto_js_fullscreen_overlay.asp -->
+            <a href="javascript:void(0)" class="closebtn" onclick="closeSearch()">&times;</a>
+
+            <div class="overlay-searchbar">
+                <div id="resource-header">
+                    <h2 id="page-resource-header">
+                        Resource Page
+                    </h2>
+
+                    <div class="searchBar">
+                        <input type="text" id="search-input" onkeydown="if (event.keyCode == 13)
+                        document.getElementById('search-icon').click()" placeholder="Search">
+                        <input type="image" src="assets/img/searchIcon.png" onClick="searchThis()" alt="search-icon" id="search-icon">
+                    </div>
+                </div>
+                <div id="search-results">
+                    <div id="search-result-number">
+                        <p id="search-result-number-text"></p>
+                    </div>
+
+                    <div id="search-result-individual">
+                        <h2 class="search-result-header"></h2>
+                        <p class="search-result-description"></p>
+                    </div>
+                    <div id="search-result-individual">
+                        <h2 class="search-result-header"></h2>
+                        <p class="search-result-description"></p>
+                    </div>
+                    <div id="search-result-individual">
+                        <h2 class="search-result-header"></h2>
+                        <p class="search-result-description"></p>
+                    </div>
+                    <div id="search-result-individual">
+                        <h2 class="search-result-header"></h2>
+                        <p class="search-result-description"></p>
+                    </div>
+                    <div id="search-result-individual">
+                        <h2 class="search-result-header"></h2>
+                        <p class="search-result-description"></p>
+                    </div>
+                    <div id="search-result-individual">
+                        <h2 class="search-result-header"></h2>
+                        <p class="search-result-description"></p>
+                    </div>
+                    <div id="search-result-individual">
+                        <h2 class="search-result-header"></h2>
+                        <p class="search-result-description"></p>
+                    </div>
+                    <div id="search-result-individual">
+                        <h2 class="search-result-header"></h2>
+                        <p class="search-result-description"></p>
+                    </div>
+                    <div id="search-result-individual">
+                        <h2 class="search-result-header"></h2>
+                        <p class="search-result-description"></p>
+                    </div>
+                    <div id="search-result-individual">
+                        <h2 class="search-result-header"></h2>
+                        <p class="search-result-description"></p>
+                    </div>
+                    <p id="search-result-page-number">
+                        1
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <nav class="navbar navbar-inverse navbar-fixed-top myNav" role="navigation">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+                    <a class="navbar-brand" href="index.html">StudyMe</a>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Courses <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="courses/course1.html">303: Modern Arts</a></li>
+                                <li><a href="courses/course2.html">350: Art History</a></li>
+                                <li><a href="courses/course3.html">351: Western Art</a></li>
+                                <li><a href="courses/course4.html">364: Pop Art</a></li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a onclick="openSearch()">Resources</a>
+                        </li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#"><img src="assets/img/chat.png" class="icons" alt="chat"></a>
+                            <ul class="dropdown-menu chat-description" id="chat-list" data-tabref="chatbox">
+                                <li class="chat-info chat-controls">
+                                    <a onclick="change_chat(this)" data-ref="first-chat-message">
+                                        <h3 class="chat-name">303:Modern Arts Assignment 01</h3>
+                                        <p class="chat-last-message">Jay Lu: lol nice</p>
+                                    </a>
+                                </li>
+                                <li class="chat-info chat-controls">
+                                    <a onclick="change_chat(this)" data-ref="second-chat-message">
+                                        <h3 class="chat-name">350: Art History: Assignment 02</h3>
+                                        <p class="chat-last-message">Sam Smith: help me </p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#"><img src="assets/img/notification.png" class="icons" alt="notification"></a>
+                            <ul class="dropdown-menu chat-description">
+                                <li>
+                                    <div class="chat-info">
+                                        <a href="courses/course1ass1feedback.html">
+                                            <h3 class="chat-name">Jay Lu</h3>
+                                            <p class="chat-last-message">Left a feedback</p>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="chat-info">
+                                        <a href="courses/course2ass2feedback.html">
+                                            <h3 class="chat-name">Sam Smith</h3>
+                                            <p class="chat-last-message">Liked your post</p>
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#"><img src="assets/img/settings.png" class="icons" alt="settings"> <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Preferences</a></li>
+                                <li><a href="#">Privacy</a></li>
+                                <li><a href="#">Account Settings</a></li>
+                                <li><a id="test" href="#">Log out</a></li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container -->
+        </nav>
+    </div>
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 id="page-header">
+                    Dashboard
+                </h1>
+                <div id="dashboard-card-container col-xs-12 col-sm-6 col-md-4">
+                    <!-- Dashboard Cards 1~4 -->
+                    <div class="dashboard-card">
+                        <a href="courses/course1.html">
+                            <div class="dashboard-card-colorbox" style="background-color:brown;">
+                                <h2>Arts 303 - Modern Arts</h2>
+                            </div>
+                        </a>
+                        <a href="courses/course1ass1.html">
+                            <div class="dashboard-card-linkbox">
+                                <p><b>Assignment 01 - Questions and Answers</b><br></p>
+                                <p class="assignment-detailed-info">Due Date: 28 May
+                                    <tab>Grade: ~/100</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="dashboard-card">
+                        <a href="courses/course2.html">
+                            <div class="dashboard-card-colorbox" style="background-color:darkmagenta;">
+                                <h2>Arts 350 - Art History</h2>
+                            </div>
+                        </a>
+                        <a href="courses/course2ass2.html">
+                            <div class="dashboard-card-linkbox">
+                                <p><b>Assignment 02 - Questions and Answers</b><br></p>
+                                <p class="assignment-detailed-info">Due Date: ~
+                                    <tab>Grade: ~/~</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="dashboard-card">
+                        <a href="courses/course3.html">
+                            <div class="dashboard-card-colorbox" style="background-color:darkred;">
+                                <h2>Arts 351 - Western Art</h2>
+                            </div>
+                        </a>
+                        <a>
+                            <div class="dashboard-card-linkbox">
+                                <p><b>No Active Assignments</b><br></p>
+                                <p class="assignment-detailed-info">Due Date: ~
+                                    <tab>Grade: ~/~</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="dashboard-card">
+                        <a href="courses/course4.html">
+                            <div class="dashboard-card-colorbox" style="background-color:darkgreen;">
+                                <h2>Arts 364 - Pop Art</h2>
+                            </div>
+                        </a>
+                        <a>
+                            <div class="dashboard-card-linkbox">
+                                <p><b>No Active Assignments</b><br></p>
+                                <p class="assignment-detailed-info">Due Date: ~
+                                    <tab>Grade: ~/~</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- /.row -->
+
+    </div>
+    <!-- /.container -->
+
+    <!-- jQuery Version 1.11.1 -->
+    <script src="assets/js/lib/jquery-3.2.1.min.js"></script>
+    <script>
+        $(function () {
+            $("#nav-placeholder").load("pages/nav.html");
+        });
+    </script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="assets/js/lib/bootstrap.min.js"></script>
+    <script>
+        function dropdownFunction() {
+            document.getElementById("dropdownCourse").classList.toggle("show");
+        }
+
+        /* Open when someone clicks on the span element */
+        function openSearch() {
+            document.getElementById("page-resource").style.width = "100%";
+        }
+
+        /* Close when someone clicks on the "x" symbol inside the overlay */
+        function closeSearch() {
+            document.getElementById('search-results').style.display = "none";
+            document.getElementById('search-input').value = "";
+            document.getElementById("page-resource").style.width = "0%";
+        }
+
+        function searchThis() {
+            var searchResultNum = document.getElementById('search-input').value;
+            if (searchResultNum == "") {
+                document.getElementById('search-results').style.display = "none";
+            } else {
+                showSearchResults();
+                document.getElementById('search-results').style.display = "block";
+            }
+        }
+
+        function showSearchResults() {
+            var x = document.getElementsByClassName('search-result-header');
+            var y = document.getElementsByClassName('search-result-description');
+            for (var i = 0; i < x.length; i++) {
+                x[i].innerText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit Curabitur a sodales est. Aliquam erat volutpat";
+                y[i].innerText = "Morbi nec libero sit amet lacus volutpat porttitor non eget magna. Nulla eu orci a sem imperdiet gravida tempor eu lorem. Integer finibus, orci nec vestibulum venenatis, urna metus rhoncus sem, eget pretium urna lectus ut massa. Aenean venenatis urna nulla, gravida dapibus ";
+            }
+            var searchResultNum = document.getElementById('search-input').value;
+            document.getElementById('search-result-number-text').innerHTML = "About 10 Search Results on " + searchResultNum;
+        }
+
+        function openChatBox(chatTitle) {
+            document.getElementById('chat-title').innerHTML = chatTitle;
+            document.getElementById('chatbox').style.display = "block";
+        }
+        function closeChatBox() {
+            document.getElementById('chatbox').style.display = "none";
+            $("#chat-list").find(".chat-controls").removeClass("active");
+        }
+
+        function addMessage(el) {
+            activeChatContent = $("#chatbox #chat-content .active-chat .chat-last-message");
+            activeChatContentID = activeChatContent.attr("id");
+
+            var x = document.getElementById(activeChatContentID).innerHTML;
+            var message = document.getElementById('chat-box').value;
+            document.getElementById('chat-box').value = "";
+            if (message != "") {
+                x += "<br><b>User:</b> " + message;
+                document.getElementById(activeChatContentID).innerHTML = x;
+            }
+
+            var objDiv = document.getElementById(activeChatContentID);
+            objDiv.scrollTop = objDiv.scrollHeight;
+        }
+
+        function changeMessage(message) {
+            document.getElementById('chat-last-message').innerHTML = message;
+        }
+
+
+        function change_chat(el) {
+            document.getElementById('chatbox').style.display = "block";
+            caller = $(el)
+            caller.parent().parent().find(".chat-controls").removeClass("active")
+            caller.parent().addClass('active')
+
+            tab_ref = caller.attr('data-ref')
+            tab_group = caller.parent().parent().attr('data-tabref')
+
+            console.log(tab_ref)
+            console.log(tab_group)
+
+            $("#" + tab_group + " #chat-content .active-chat").removeClass("active-chat")
+            $("#" + tab_group + " #chat-content #" + tab_ref).addClass("active-chat")
+
+            $("#" + tab_group + " #chat-topbar .active-chat").removeClass("active-chat")
+            $("#" + tab_group + " #chat-topbar #" + tab_ref).addClass("active-chat")
+        }
+    </script>
+
+</body>
+
+</html>

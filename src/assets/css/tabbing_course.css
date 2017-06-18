@@ -1,0 +1,149 @@
+/**
+    Assignment Page
+**/
+
+.question{
+    display:none;
+}
+.question.active-question{
+    display:inline-block;
+}
+#scroll-question-space{
+    height:100%;
+    width:150px;
+    border:1px solid #C7CDD1;
+}
+.active{
+    background-color:#eee;
+}
+.questions-small{
+    display:inline-block;
+    position:absolute;
+    top:60px;
+    left:0;
+    bottom:0;
+    width:150px;
+    border:1px solid black;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 95%;
+    padding-left:0px;
+}
+.questions-small > li{
+    padding: 10px;
+    margin: 10px 10px 10px;
+    text-align:center;
+    font-size:60px;
+    font: bold;
+    width:85%;
+    border: 1px solid #C7CDD1;
+}
+.questions-big{
+    width:85%;
+    border:1px solid black;
+    padding: 10px;
+    display:inline-block;
+    position:absolute;
+    top:60px;
+    left:150px;
+    bottom:0;
+    right:0;
+    overflow-y: scroll;
+    height: 95%;
+}
+
+.text-box{
+    width:100%;
+    height:120px;
+    overflow-y: visible;
+    background-color: lightgray;
+    border:#C7CDD1 solid 1px;
+    margin: 10px 0px 0px;
+    padding:3px;
+    font:18px;
+}
+
+
+
+.question-header{
+    font: 32px bold;
+    text-align: left;
+    margin: 10px 10px 20px;
+}
+.question-body{
+    font: 20px;
+    margin-left: 10px;
+}
+#prev-button{
+    float: left;
+}
+#next-button{
+    float: right;
+}
+
+#all-questions{
+    width:100%;
+}
+.question{
+    width:100%;
+}
+
+
+/**
+
+feedback
+
+**/
+
+.answer{
+    margin-top:20px;
+    border-top: 1px solid #ddd;
+    padding-top:10px;
+}
+.comment-header{
+    font: 30px bold;
+    text-align: left;
+    margin: 0px 0px 20px;
+}
+
+.answers-section{
+    width: 100%;
+    padding-left:20px;
+    padding-right:5px;
+    padding-top:20px;
+    margin-top:50px;
+    border-top:1px solid #ddd;
+
+}
+
+.reply, .comments{
+    margin-left:20px;
+    padding-left:20px;
+    margin-top:5px;
+    border-left: 1px solid #ddd;
+}
+
+.reply-box{
+    width:100%;
+    height:80px;
+    overflow-y: visible;
+    background-color: lightgray;
+    border:#C7CDD1 solid 1px;
+    margin: 0px 0px 0px;
+    padding:3px;
+    font:18px;
+}
+
+.comment-functions{
+    padding-bottom: 10px;
+}
+
+
+
+.btn.btn-default, .btn.disabled {
+    height:33px;
+    font-size:14px;
+    background-color:white;
+    color:#111D2E;
+    font-weight:bold;
+}

@@ -1,0 +1,333 @@
+.body{
+    background-color: #9E9069;
+
+}
+
+.disable {
+  pointer-events: none;
+  cursor: default;
+  color: black;
+  text-decoration: none;
+  
+}
+
+.myNav{
+    background-color: #111D2E;
+    border-color: #3b5998;
+    color: darkblue;
+}
+
+.icons{
+    width:22px;
+    height: 22px;
+}
+#response_area{
+    border: 2px solid black;
+    border-radius:10px;
+    padding:1.5em;
+    margin:1.5em;
+}
+
+#page-header{
+    border-bottom: 1px solid #C7CDD1;
+    margin: 20px 10px 12px;
+    padding-bottom: 12px;
+    font-size: 30px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/*
+
+    COURSE PAGE
+
+*/
+
+.page-assignment{
+    border: 1px solid #C7CDD1;
+    margin: none;
+    padding: 10px;
+    background-color: #EBEBEB;
+}
+.assignments-list{
+    border: 1px solid #EBEBEB;
+    padding-top:0px;
+    text-align: left;
+    border-bottom: 1px dotted #C7CDD1;
+}
+.assignments-header{
+    font-size: 24px;
+    background-color: #EBEBEB
+}
+.assignments-individual{
+    text-align: left;
+    padding-left:15px;
+    padding-top:0px;
+    margin: 10px 25px 10px;
+    border: 3px solid #EBEBEB;
+    background-color: white;
+}
+.assignments-name{
+    font-size: 16px ;
+}
+.assignments-individual>p{
+    font-size: 11px;
+}
+/*
+    DASHBOARD PAGE
+*/
+
+#dashboard-card-container{
+    margin: 20px 10px 12px;
+    padding-bottom: 12px;
+}
+
+.dashboard-card{
+    display:inline-block;
+    height:230px;
+    width:280px;
+    margin: 10px 15px 12px;
+    padding-bottom: 12px;
+    border: 3px solid #C7CDD1;
+}
+
+.dashboard-card-colorbox{
+    display:inline-block;
+    margin:0px;
+    padding:20px;
+    width:100%;
+    height:150px;
+    color: white;
+    text-align:left;
+}
+.dashboard-card-colorbox > h2{
+    font-size:18px;
+}
+.dashboard-card-linkbox{
+    padding: 12px;
+    max-width: 100%;
+    text-align: left;
+    color: darkblue;
+    display: inline-block;
+    white-space: nowrap;
+    overflow:hidden !important;
+    text-overflow: ellipsis;
+}
+
+.assignment-detailed-info{
+    color:black;
+    font-size:12px;
+}
+
+
+/**
+
+
+
+**/
+.two-wide > * {
+    display:inline-block;
+    width:49%;
+    vertical-align:top;
+}
+
+/* #########################################
+                FORM
+########################################  */
+form.submission-form{
+
+}
+form.submission-form div{
+
+}
+form.submission-form div label{
+    vertical-align: top;
+    width:35%;
+    display:inline-block;
+    text-align:right;
+}
+form.submission-form div input,
+form.submission-form div select,
+form.submission-form div textarea{
+    width:60%;
+}
+form.submission-form button{
+    width:100%;
+    height:2em;
+}
+
+form label:after{
+    content:":";
+}
+form .required label:before{
+    content:"*";
+    color:red;
+    font-weight:bold;
+}
+
+form.submission-form input[type='checkbox']{
+    width:auto;
+}
+
+input:invalid{
+    background: rgb(255, 0, 0);
+}
+
+div.form-group.form-options{
+
+}
+div.form-group.form-options input{
+    display:inline-block;
+    width:auto;
+    margin-left:1em;
+}
+div.form-group.form-options label{
+    display:inline-block;
+}
+div.form-group.form-options label:after{
+    content:"";
+}
+
+.red-text{
+    color:#FF0000;
+}
+
+
+input:valid{
+    
+}
+
+
+/*
+
+    Overlay
+
+*/
+
+
+.overlay {
+    /* Height & width depends on how you want to reveal the overlay (see JS below) */    
+    height: 100%;
+    width: 0;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    background-color: rgb(0,0,0); /* Black fallback color */
+    background-color: rgba(0,0,0, 0.9); /* Black w/opacity */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+
+}
+
+/* Position the content inside the overlay */
+.overlay-searchbar {
+    position: relative;
+    top: 10%; /* 25% from the top */
+    left: 3%;
+    width: 94%; /* 100% width */
+    text-align: center; /* Centered text/links */
+    margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+
+    height: 100%;
+    background-color:white;
+
+    overflow-y: scroll;
+}
+
+/* The navigation links inside the overlay */
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block; /* Display block instead of inline */
+    transition: 0.3s; /* Transition effects on hover (color) */
+}
+
+/* When you mouse over the navigation links, change their color */
+.overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+}
+
+/* Position the close button (top right corner) */
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+
+/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+@media screen and (max-height: 450px) {
+    .overlay a {font-size: 20px}
+    .overlay .closebtn {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
+}
+#page-resource-header{
+    font: 32px;
+    font-weight: bold;
+    text-align: center;
+    padding-bottom: 20px;
+}
+#resource-header>h2{
+    margin-top:0px;
+    font-size: 40px;
+    font-weight: bold;
+}
+#resource-header{
+    position: inline-block;
+    padding-top:40px;
+    width: 100%;
+    background-color: #F2F2F2;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 30px;
+}
+.searchBar{
+    padding-bottom:25px;
+}
+#search-input{
+    height: 15px;
+    width: 80%; /* Full-width */
+    font-size: 16px; /* Increase font-size */
+    padding: 12px 40px 12px 20px; /* Add some padding */
+}
+#search-icon{
+    width: 24px;
+    height: 24px;
+    position: absolute;
+}
+
+#search-results{
+    display: none;
+    padding-left: 10%;
+    padding-right: 10%;
+    word-wrap: break-word;
+    text-align: left;
+}
+
+.search-result-header{
+    font-size: 20px;
+    font-weight: bold;
+
+}
+.search-result-description{
+    font: 14px;
+}
+
+#search-result-page-number{
+    padding-top:15px;
+    padding-bottom: 10px;
+    text-align: center;
+    font: 14px;
+    font-weight: bold;
+}
+
+#search-result-number>p{
+    color: #808080;
+    font-size: 12px;
+}

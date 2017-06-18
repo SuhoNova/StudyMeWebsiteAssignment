@@ -1,0 +1,134 @@
+
+.chat{
+    display:none;
+}
+.chat.active-chat{
+    display:inline-block;
+}
+
+
+
+/**
+
+    CHAT
+
+**/
+.chat-description{
+    width: 250px;
+    padding:0px;
+}
+.chat-info{
+    width:100%;
+    height:40px;
+    display: block;
+    border: 1px solid #ddd;
+    margin: 0px;
+}
+.chat-info>a{
+    height:100%;
+    width:100%;
+    display:block;
+}
+.chat-name{
+    position: relative;
+    top: 35%;
+    margin-top:0px;
+    margin-bottom:0px;
+    font-size: 13px;
+    float:left;
+    width:80px;
+    height:100%;
+    overflow:hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    font-weight: bold;
+}
+.chat-last-message{
+    position: relative;
+    top: 35%;   
+    margin-top:0px;
+    margin-bottom:0px;
+    font-size: 14px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+#chat-content>.chat{
+    width:100%;
+    height:100%;
+}
+#chat-content>.chat>.chat-last-message{
+    height: 100%;
+    top:0;
+    overflow-y: scroll;
+    width:100%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+#chatbox{
+    display:none;
+    position:fixed;
+    bottom:0;
+    right:50px;
+    width:250px;
+    height:345px;
+    background-color: white;
+    border: 1px solid blue;
+    z-index: 2;
+}
+#chat-topbar{
+    width:100%;
+    height: 25px;
+    border: 1px solid black;
+    background-color: #111D2E;
+    color: black;
+}
+#chat-topbar > p{
+    font-size: 14px;
+    font-weight: bold;
+    color: #9d9d9d;
+}
+#chat-exit-btn{
+    height:100%;
+    float: right;
+    display:inline-block;
+    background-color: Transparent;
+    border: 0px;
+    color: #9d9d9d;
+}
+#chat-content{
+    padding-top:10px;
+    padding-left: 4px;
+    padding-right: 4px;
+    padding-bottom: 2px;
+    width:100%;
+    height: 280px;
+    vertical-align:bottom;
+    overflow-y: visible;
+}
+#chat-message{
+    max-height: 100%;
+    overflow: auto;
+}
+
+.chat-input{
+    height: 40px;
+    width:100%;
+    position: fixed;
+    bottom:0;
+    padding-top: 10px;
+}
+
+#chat-box{
+    width: 220px;
+    height: 100%;
+    float:left;
+    display: inline-block;
+}
+#send-icon{
+    width:22px;
+    height:22px;
+    padding:1px;
+    display: inline-block;
+}
